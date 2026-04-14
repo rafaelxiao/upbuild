@@ -123,6 +123,13 @@ a:hover {
   font-weight: 600;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .hero {
   padding: 72px 0 40px;
 }
@@ -314,6 +321,52 @@ a:hover {
 
 .muted {
   color: var(--text-secondary);
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: inline-flex;
+  gap: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 34px;
+  padding: 0 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  background: rgba(91, 124, 255, 0.08);
+}
+
+.lang-btn-active {
+  background: var(--accent);
+  color: white;
+}
+
+.lang-btn-active:hover {
+  background: var(--accent-strong);
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-switcher {
+    background: var(--surface-strong);
+  }
 }
 
 @media (max-width: 820px) {
