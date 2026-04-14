@@ -7,6 +7,41 @@
   <title>UpBuild</title>
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/i18n.js" defer></script>
+  <script>
+    window.I18N = {
+      "nav.home":    { en: "Home", "zh-Hans": "首页", "zh-Hant": "首頁" },
+      "nav.privacy": { en: "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私" },
+      "nav.support": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "nav.terms":   { en: "Terms", "zh-Hans": "条款", "zh-Hant": "條款" },
+      "hero.kicker": { en: "UpBuild · 钱芽 · 錢芽", "zh-Hans": "UpBuild · 钱芽 · 錢芽", "zh-Hant": "UpBuild · 钱芽 · 錢芽" },
+      "hero.title":  { en: "Track money flow. Grow with clarity.", "zh-Hans": "追踪资金流动，清晰掌握财富增长", "zh-Hant": "追蹤資金流動，清晰掌握財富增長" },
+      "hero.desc":   { en: "UpBuild is a personal finance app that helps you track income, expenses, transfers, balances, and long-term wealth progress in one place.", "zh-Hans": "UpBuild 是一款个人财务应用，帮助你在一个地方追踪收入、支出、转账、余额和长期财富进展。", "zh-Hant": "UpBuild 是一款個人財務應用，幫助您在一個地方追蹤收入、支出、轉帳、餘額和長期財富進展。" },
+      "hero.support":    { en: "Get support", "zh-Hans": "获取支持", "zh-Hant": "獲取支援" },
+      "hero.privacy":    { en: "Read privacy policy", "zh-Hans": "阅读隐私政策", "zh-Hant": "閱讀隱私政策" },
+      "section.features": { en: "What UpBuild helps you do", "zh-Hans": "UpBuild 帮你做什么", "zh-Hant": "UpBuild 幫你做什麼" },
+      "feat1.title": { en: "Track everyday activity", "zh-Hans": "追踪日常收支", "zh-Hant": "追蹤日常收支" },
+      "feat1.desc":  { en: "Record income, expenses, transfers, repayments, and account changes with a fast workflow.", "zh-Hans": "快速记录收入、支出、转账、还款和账户变动。", "zh-Hant": "快速記錄收入、支出、轉帳、還款和帳戶變動。" },
+      "feat2.title": { en: "See your full picture", "zh-Hans": "全局一目了然", "zh-Hant": "全局一目瞭然" },
+      "feat2.desc":  { en: "Monitor account balances, cash flow, and net worth trends across multiple account types.", "zh-Hans": "监控多类型账户的余额、现金流和净资产趋势。", "zh-Hant": "監控多類型帳戶的餘額、現金流和淨資產趨勢。" },
+      "feat3.title": { en: "Stay private", "zh-Hans": "隐私安全", "zh-Hant": "隱私安全" },
+      "feat3.desc":  { en: "Your financial records are stored locally on your device. UpBuild does not use analytics or tracking.", "zh-Hans": "你的财务记录仅存储在设备本地。UpBuild 不使用任何分析或追踪服务。", "zh-Hant": "您的財務記錄僅存儲在設備本地。UpBuild 不使用任何分析或追蹤服務。" },
+      "section.links": { en: "Useful links", "zh-Hans": "实用链接", "zh-Hant": "實用連結" },
+      "links.support.title": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "links.support.desc":  { en: "Need help with the app, purchases, or restoring access?", "zh-Hans": "需要应用、购买或恢复访问方面的帮助？", "zh-Hant": "需要應用、購買或恢復訪問方面的幫助？" },
+      "links.support.page":  { en: "Support page", "zh-Hans": "支持页面", "zh-Hant": "支援頁面" },
+      "links.legal.title": { en: "Legal", "zh-Hans": "法律条款", "zh-Hant": "法律條款" },
+      "links.legal.desc":  { en: "Review the pages most relevant for App Store launch and subscription transparency.", "zh-Hans": "查看与 App Store 上架和订阅透明度相关的页面。", "zh-Hant": "查看與 App Store 上架和訂閱透明度相關的頁面。" },
+      "links.legal.privacy": { en: "Privacy Policy", "zh-Hans": "隐私政策", "zh-Hant": "隱私政策" },
+      "links.legal.terms":  { en: "Terms of Use", "zh-Hans": "使用条款", "zh-Hant": "使用條款" },
+      "section.highlights": { en: "Highlights", "zh-Hans": "亮点", "zh-Hant": "亮點" },
+      "hl1": { en: "Local-first data storage on your device", "zh-Hans": "数据优先存储在设备本地", "zh-Hant": "數據優先存儲在設備本地" },
+      "hl2": { en: "Multi-currency totals powered by exchange-rate lookup", "zh-Hans": "多币种汇总，实时汇率换算", "zh-Hant": "多幣種匯總，實時匯率換算" },
+      "hl3": { en: "Export and import support for backups", "zh-Hans": "支持导出导入备份", "zh-Hant": "支持導出導入備份" },
+      "hl4": { en: "Apple-managed in-app purchases and subscriptions", "zh-Hans": "由 Apple 管理的应用内购买和订阅", "zh-Hant": "由 Apple 管理的應用內購買和訂閱" },
+      "footer.copy": { en: "© UpBuild", "zh-Hans": "© UpBuild", "zh-Hant": "© UpBuild" }
+    };
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,12 +52,15 @@
         </span>
         <span>UpBuild</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher"></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="support.html" data-i18n="nav.support">Support</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -30,15 +68,15 @@
     <section class="hero">
       <div class="container">
         <div class="hero-card">
-          <div class="hero-kicker">UpBuild · 钱芽 · 錢芽</div>
-          <h1>Track money flow. Grow with clarity.</h1>
-          <p>
+          <div class="hero-kicker" data-i18n="hero.kicker">UpBuild · 钱芽 · 錢芽</div>
+          <h1 data-i18n="hero.title">Track money flow. Grow with clarity.</h1>
+          <p data-i18n="hero.desc">
             UpBuild is a personal finance app that helps you track income, expenses, transfers,
             balances, and long-term wealth progress in one place.
           </p>
           <div class="hero-actions">
-            <a class="button" href="support.html">Get support</a>
-            <a class="button-secondary" href="privacy.html">Read privacy policy</a>
+            <a class="button" href="support.html" data-i18n="hero.support">Get support</a>
+            <a class="button-secondary" href="privacy.html" data-i18n="hero.privacy">Read privacy policy</a>
           </div>
         </div>
       </div>
@@ -46,19 +84,19 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">What UpBuild helps you do</h2>
+        <h2 class="section-title" data-i18n="section.features">What UpBuild helps you do</h2>
         <div class="grid grid-3">
           <article class="card">
-            <h3>Track everyday activity</h3>
-            <p>Record income, expenses, transfers, repayments, and account changes with a fast workflow.</p>
+            <h3 data-i18n="feat1.title">Track everyday activity</h3>
+            <p data-i18n="feat1.desc">Record income, expenses, transfers, repayments, and account changes with a fast workflow.</p>
           </article>
           <article class="card">
-            <h3>See your full picture</h3>
-            <p>Monitor account balances, cash flow, and net worth trends across multiple account types.</p>
+            <h3 data-i18n="feat2.title">See your full picture</h3>
+            <p data-i18n="feat2.desc">Monitor account balances, cash flow, and net worth trends across multiple account types.</p>
           </article>
           <article class="card">
-            <h3>Stay private</h3>
-            <p>Your financial records are stored locally on your device. UpBuild does not use analytics or tracking.</p>
+            <h3 data-i18n="feat3.title">Stay private</h3>
+            <p data-i18n="feat3.desc">Your financial records are stored locally on your device. UpBuild does not use analytics or tracking.</p>
           </article>
         </div>
       </div>
@@ -66,22 +104,22 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Useful links</h2>
+        <h2 class="section-title" data-i18n="section.links">Useful links</h2>
         <div class="grid grid-2">
           <article class="card">
-            <h3>Support</h3>
-            <p>Need help with the app, purchases, or restoring access?</p>
+            <h3 data-i18n="links.support.title">Support</h3>
+            <p data-i18n="links.support.desc">Need help with the app, purchases, or restoring access?</p>
             <ul class="link-list">
-              <li><a href="support.html">Support page</a></li>
+              <li><a href="support.html" data-i18n="links.support.page">Support page</a></li>
               <li><a href="mailto:rafaelxiao@hotmail.com">rafaelxiao@hotmail.com</a></li>
             </ul>
           </article>
           <article class="card">
-            <h3>Legal</h3>
-            <p>Review the pages most relevant for App Store launch and subscription transparency.</p>
+            <h3 data-i18n="links.legal.title">Legal</h3>
+            <p data-i18n="links.legal.desc">Review the pages most relevant for App Store launch and subscription transparency.</p>
             <ul class="link-list">
-              <li><a href="privacy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="privacy.html" data-i18n="links.legal.privacy">Privacy Policy</a></li>
+              <li><a href="terms.html" data-i18n="links.legal.terms">Terms of Use</a></li>
             </ul>
           </article>
         </div>
@@ -90,13 +128,13 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Highlights</h2>
+        <h2 class="section-title" data-i18n="section.highlights">Highlights</h2>
         <div class="card">
           <ul class="check-list">
-            <li>Local-first data storage on your device</li>
-            <li>Multi-currency totals powered by exchange-rate lookup</li>
-            <li>Export and import support for backups</li>
-            <li>Apple-managed in-app purchases and subscriptions</li>
+            <li data-i18n="hl1">Local-first data storage on your device</li>
+            <li data-i18n="hl2">Multi-currency totals powered by exchange-rate lookup</li>
+            <li data-i18n="hl3">Export and import support for backups</li>
+            <li data-i18n="hl4">Apple-managed in-app purchases and subscriptions</li>
           </ul>
         </div>
       </div>
@@ -105,11 +143,11 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© UpBuild</div>
+      <div data-i18n="footer.copy">© UpBuild</div>
       <div class="inline-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
       </div>
     </div>
   </footer>
