@@ -7,6 +7,40 @@
   <title>Privacy Policy · UpBuild</title>
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/i18n.js" defer></script>
+  <script>
+    window.I18N = {
+      "nav.home":    { en: "Home", "zh-Hans": "首页", "zh-Hant": "首頁" },
+      "nav.privacy": { en: "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私" },
+      "nav.support": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "nav.terms":   { en: "Terms", "zh-Hans": "条款", "zh-Hant": "條款" },
+      "kicker":      { en: "Privacy Policy", "zh-Hans": "隐私政策", "zh-Hant": "隱私政策" },
+      "title":       { en: "Your privacy matters.", "zh-Hans": "你的隐私很重要。", "zh-Hant": "您的隱私很重要。" },
+      "updated":     { en: "Last updated: February 2026", "zh-Hans": "最后更新：2026 年 2 月", "zh-Hant": "最後更新：2026 年 2 月" },
+      "overview.h":  { en: "Overview", "zh-Hans": "概述", "zh-Hant": "概述" },
+      "overview.p":  { en: "UpBuild is a personal finance app that helps you track income, expenses, transfers, and account balances. This policy explains how your data is handled.", "zh-Hans": "UpBuild 是一款个人财务应用，帮助你追踪收入、支出、转账和账户余额。本政策说明你的数据如何被处理。", "zh-Hant": "UpBuild 是一款個人財務應用，幫助您追蹤收入、支出、轉帳和帳戶餘額。本政策說明您的數據如何被處理。" },
+      "storage.h":   { en: "Data storage", "zh-Hans": "数据存储", "zh-Hant": "數據存儲" },
+      "storage.p1":  { en: "Your financial data — including accounts, transactions, categories, tags, and settings — is stored locally on your device using Core Data.", "zh-Hans": "你的财务数据（包括账户、交易、分类、标签和设置）使用 Core Data 存储在设备本地。", "zh-Hant": "您的財務數據（包括帳戶、交易、分類、標籤和設置）使用 Core Data 存儲在設備本地。" },
+      "storage.p2":  { en: "UpBuild does not operate its own backend for storing your financial records. Your data does not leave your device unless you explicitly export it.", "zh-Hans": "UpBuild 没有自己的后端服务器来存储你的财务记录。除非你主动导出，数据不会离开你的设备。", "zh-Hant": "UpBuild 沒有自己的後端伺服器來存儲您的財務記錄。除非您主動導出，數據不會離開您的設備。" },
+      "collection.h": { en: "Data collection", "zh-Hans": "数据收集", "zh-Hant": "數據收集" },
+      "collection.p": { en: "UpBuild does not collect, transmit, or store personal information for analytics, advertising, tracking, or profiling.", "zh-Hans": "UpBuild 不为分析、广告、追踪或画像而收集、传输或存储个人信息。", "zh-Hant": "UpBuild 不為分析、廣告、追蹤或畫像而收集、傳輸或存儲個人信息。" },
+      "exchange.h":  { en: "Exchange rate data", "zh-Hans": "汇率数据", "zh-Hant": "匯率數據" },
+      "exchange.p":  { en: "To show multi-currency totals, the app fetches exchange rate data from <a href=\"https://open.er-api.com\" target=\"_blank\" rel=\"noreferrer\">open.er-api.com</a>. Only the requested base currency code is sent. No personal data, device identifiers, or financial records are transmitted in those requests.", "zh-Hans": "为了显示多币种汇总，应用从 <a href=\"https://open.er-api.com\" target=\"_blank\" rel=\"noreferrer\">open.er-api.com</a> 获取汇率数据。请求仅发送所需的基础货币代码，不传输任何个人数据、设备标识或财务记录。", "zh-Hant": "為了顯示多幣種匯總，應用從 <a href=\"https://open.er-api.com\" target=\"_blank\" rel=\"noreferrer\">open.er-api.com</a> 獲取匯率數據。請求僅發送所需的基礎貨幣代碼，不傳輸任何個人數據、設備標識或財務記錄。" },
+      "purchases.h": { en: "Purchases", "zh-Hans": "购买", "zh-Hant": "購買" },
+      "purchases.p": { en: "In-app purchases and subscriptions are processed entirely by Apple through the App Store. UpBuild does not access, collect, or store payment or billing information.", "zh-Hans": "应用内购买和订阅完全由 Apple 通过 App Store 处理。UpBuild 不会访问、收集或存储支付或账单信息。", "zh-Hant": "應用內購買和訂閱完全由 Apple 通過 App Store 處理。UpBuild 不會訪問、收集或存儲支付或帳單信息。" },
+      "thirdparty.h": { en: "Third-party services", "zh-Hans": "第三方服务", "zh-Hant": "第三方服務" },
+      "thirdparty.p": { en: "Apart from the exchange-rate provider described above, UpBuild does not integrate third-party analytics, advertising, or tracking services.", "zh-Hans": "除上述汇率服务外，UpBuild 不集成任何第三方分析、广告或追踪服务。", "zh-Hant": "除上述匯率服務外，UpBuild 不集成任何第三方分析、廣告或追蹤服務。" },
+      "export.h":    { en: "Export and import", "zh-Hans": "导出与导入", "zh-Hant": "導出與導入" },
+      "export.p":    { en: "You can export your data as a backup file and import it later. Exported files may contain sensitive financial information, so you should store them securely.", "zh-Hans": "你可以将数据导出为备份文件并稍后导入。导出文件可能包含敏感财务信息，请妥善保管。", "zh-Hant": "您可以將數據導出為備份文件並稍後導入。導出文件可能包含敏感財務信息，請妥善保管。" },
+      "control.h":   { en: "Your control", "zh-Hans": "你的控制权", "zh-Hant": "您的控制權" },
+      "control.p":   { en: "You can delete transactions, accounts, or categories inside the app. To remove all app data, you can delete the app from your device.", "zh-Hans": "你可以在应用内删除交易、账户或分类。要删除所有应用数据，可以从设备上卸载应用。", "zh-Hant": "您可以在應用內刪除交易、帳戶或分類。要刪除所有應用數據，可以從設備上卸載應用。" },
+      "future.h":    { en: "Future updates", "zh-Hans": "未来更新", "zh-Hant": "未來更新" },
+      "future.p":    { en: "If future versions of the app introduce features that require data collection or account-based services, this policy will be updated before those changes take effect.", "zh-Hans": "如果未来版本引入需要数据收集或基于帐户的服务的新功能，本政策将在变更生效前更新。", "zh-Hant": "如果未來版本引入需要數據收集或基於帳戶的服務的新功能，本政策將在變更生效前更新。" },
+      "contact.h":   { en: "Contact", "zh-Hans": "联系方式", "zh-Hant": "聯繫方式" },
+      "contact.p":   { en: "If you have questions about this privacy policy or how data is handled, contact: <a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>", "zh-Hans": "如果你对本隐私政策或数据处理方式有疑问，请联系：<a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>", "zh-Hant": "如果您對本隱私政策或數據處理方式有疑問，請聯繫：<a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>" },
+      "footer.copy": { en: "© UpBuild", "zh-Hans": "© UpBuild", "zh-Hant": "© UpBuild" }
+    };
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,118 +51,86 @@
         </span>
         <span>UpBuild</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher"></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="support.html" data-i18n="nav.support">Support</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="page-shell">
     <div class="container">
       <section class="page-hero">
-        <div class="hero-kicker">Privacy Policy</div>
-        <h1>Your privacy matters.</h1>
-        <p>Last updated: February 2026</p>
+        <div class="hero-kicker" data-i18n="kicker">Privacy Policy</div>
+        <h1 data-i18n="title">Your privacy matters.</h1>
+        <p data-i18n="updated">Last updated: February 2026</p>
       </section>
 
       <section class="page-card">
-        <h2>Overview</h2>
-        <p>
-          UpBuild is a personal finance app that helps you track income, expenses, transfers,
-          and account balances. This policy explains how your data is handled.
-        </p>
+        <h2 data-i18n="overview.h">Overview</h2>
+        <p data-i18n="overview.p">UpBuild is a personal finance app that helps you track income, expenses, transfers, and account balances. This policy explains how your data is handled.</p>
       </section>
 
       <section class="page-card">
-        <h2>Data storage</h2>
-        <p>
-          Your financial data — including accounts, transactions, categories, tags, and settings —
-          is stored locally on your device using Core Data.
-        </p>
-        <p>
-          UpBuild does not operate its own backend for storing your financial records.
-          Your data does not leave your device unless you explicitly export it.
-        </p>
+        <h2 data-i18n="storage.h">Data storage</h2>
+        <p data-i18n="storage.p1">Your financial data — including accounts, transactions, categories, tags, and settings — is stored locally on your device using Core Data.</p>
+        <p data-i18n="storage.p2">UpBuild does not operate its own backend for storing your financial records. Your data does not leave your device unless you explicitly export it.</p>
       </section>
 
       <section class="page-card">
-        <h2>Data collection</h2>
-        <p>
-          UpBuild does not collect, transmit, or store personal information for analytics,
-          advertising, tracking, or profiling.
-        </p>
+        <h2 data-i18n="collection.h">Data collection</h2>
+        <p data-i18n="collection.p">UpBuild does not collect, transmit, or store personal information for analytics, advertising, tracking, or profiling.</p>
       </section>
 
       <section class="page-card">
-        <h2>Exchange rate data</h2>
-        <p>
-          To show multi-currency totals, the app fetches exchange rate data from
-          <a href="https://open.er-api.com" target="_blank" rel="noreferrer">open.er-api.com</a>.
-          Only the requested base currency code is sent. No personal data, device identifiers,
-          or financial records are transmitted in those requests.
-        </p>
+        <h2 data-i18n="exchange.h">Exchange rate data</h2>
+        <p data-i18n="exchange.p">To show multi-currency totals, the app fetches exchange rate data from <a href="https://open.er-api.com" target="_blank" rel="noreferrer">open.er-api.com</a>. Only the requested base currency code is sent. No personal data, device identifiers, or financial records are transmitted in those requests.</p>
       </section>
 
       <section class="page-card">
-        <h2>Purchases</h2>
-        <p>
-          In-app purchases and subscriptions are processed entirely by Apple through the App Store.
-          UpBuild does not access, collect, or store payment or billing information.
-        </p>
+        <h2 data-i18n="purchases.h">Purchases</h2>
+        <p data-i18n="purchases.p">In-app purchases and subscriptions are processed entirely by Apple through the App Store. UpBuild does not access, collect, or store payment or billing information.</p>
       </section>
 
       <section class="page-card">
-        <h2>Third-party services</h2>
-        <p>
-          Apart from the exchange-rate provider described above, UpBuild does not integrate
-          third-party analytics, advertising, or tracking services.
-        </p>
+        <h2 data-i18n="thirdparty.h">Third-party services</h2>
+        <p data-i18n="thirdparty.p">Apart from the exchange-rate provider described above, UpBuild does not integrate third-party analytics, advertising, or tracking services.</p>
       </section>
 
       <section class="page-card">
-        <h2>Export and import</h2>
-        <p>
-          You can export your data as a backup file and import it later. Exported files may contain
-          sensitive financial information, so you should store them securely.
-        </p>
+        <h2 data-i18n="export.h">Export and import</h2>
+        <p data-i18n="export.p">You can export your data as a backup file and import it later. Exported files may contain sensitive financial information, so you should store them securely.</p>
       </section>
 
       <section class="page-card">
-        <h2>Your control</h2>
-        <p>
-          You can delete transactions, accounts, or categories inside the app. To remove all app data,
-          you can delete the app from your device.
-        </p>
+        <h2 data-i18n="control.h">Your control</h2>
+        <p data-i18n="control.p">You can delete transactions, accounts, or categories inside the app. To remove all app data, you can delete the app from your device.</p>
       </section>
 
       <section class="page-card">
-        <h2>Future updates</h2>
-        <p>
-          If future versions of the app introduce features that require data collection or account-based
-          services, this policy will be updated before those changes take effect.
-        </p>
+        <h2 data-i18n="future.h">Future updates</h2>
+        <p data-i18n="future.p">If future versions of the app introduce features that require data collection or account-based services, this policy will be updated before those changes take effect.</p>
       </section>
 
       <section class="page-card">
-        <h2>Contact</h2>
-        <p>
-          If you have questions about this privacy policy or how data is handled, contact:
-          <a href="mailto:rafaelxiao@hotmail.com">rafaelxiao@hotmail.com</a>
-        </p>
+        <h2 data-i18n="contact.h">Contact</h2>
+        <p data-i18n="contact.p">If you have questions about this privacy policy or how data is handled, contact: <a href="mailto:rafaelxiao@hotmail.com">rafaelxiao@hotmail.com</a></p>
       </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© UpBuild</div>
+      <div data-i18n="footer.copy">© UpBuild</div>
       <div class="inline-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
       </div>
     </div>
   </footer>
