@@ -7,6 +7,33 @@
   <title>Terms of Use · UpBuild</title>
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/i18n.js" defer></script>
+  <script>
+    window.I18N = {
+      "nav.home":    { en: "Home", "zh-Hans": "首页", "zh-Hant": "首頁" },
+      "nav.privacy": { en: "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私" },
+      "nav.support": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "nav.terms":   { en: "Terms", "zh-Hans": "条款", "zh-Hant": "條款" },
+      "kicker":      { en: "Terms of Use", "zh-Hans": "使用条款", "zh-Hant": "使用條款" },
+      "title":       { en: "Terms and subscription information", "zh-Hans": "条款与订阅信息", "zh-Hant": "條款與訂閱信息" },
+      "subtitle":    { en: "UpBuild offers optional in-app purchases and subscriptions managed by Apple through the App Store.", "zh-Hans": "UpBuild 提供可选的应用内购买和订阅，由 Apple 通过 App Store 管理。", "zh-Hant": "UpBuild 提供可選的應用內購買和訂閱，由 Apple 通過 App Store 管理。" },
+      "eula.h":      { en: "Apple Standard EULA", "zh-Hans": "Apple 标准最终用户许可协议", "zh-Hant": "Apple 標準最終用戶許可協議" },
+      "eula.p1":     { en: "UpBuild relies on Apple's Standard End User License Agreement for App Store apps.", "zh-Hans": "UpBuild 依据 Apple 为 App Store 应用提供的标准最终用户许可协议。", "zh-Hant": "UpBuild 依據 Apple 為 App Store 應用提供的標準最終用戶許可協議。" },
+      "eula.p2":     { en: "Read it here: <a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" rel=\"noreferrer\">Apple Standard EULA</a>", "zh-Hans": "在此阅读：<a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" rel=\"noreferrer\">Apple 标准最终用户许可协议</a>", "zh-Hant": "在此閱讀：<a href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\" target=\"_blank\" rel=\"noreferrer\">Apple 標準最終用戶許可協議</a>" },
+      "billing.h":   { en: "Purchases and billing", "zh-Hans": "购买与账单", "zh-Hant": "購買與帳單" },
+      "billing.l1":  { en: "Payment is charged to your Apple ID account after purchase confirmation.", "zh-Hans": "购买确认后，费用将从你的 Apple ID 帐户扣除。", "zh-Hant": "購買確認後，費用將從您的 Apple ID 帳戶扣除。" },
+      "billing.l2":  { en: "Auto-renewable subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.", "zh-Hans": "自动续期订阅会在当前计费周期结束前 24 小时内自动续期，除非在此前取消。", "zh-Hant": "自動續期訂閱會在當前計費週期結束前 24 小時內自動續期，除非在此前取消。" },
+      "billing.l3":  { en: "You can manage and cancel subscriptions in your Apple account settings.", "zh-Hans": "你可以在 Apple 帐户设置中管理和取消订阅。", "zh-Hant": "您可以在 Apple 帳戶設置中管理和取消訂閱。" },
+      "billing.l4":  { en: "Lifetime purchases, where offered, are non-renewing one-time purchases.", "zh-Hans": "终身购买（如提供）为不可续期的一次性购买。", "zh-Hant": "終身購買（如提供）為不可續期的一次性購買。" },
+      "manage.h":    { en: "Managing subscriptions", "zh-Hans": "管理订阅", "zh-Hant": "管理訂閱" },
+      "manage.p1":   { en: "To manage your subscription, visit: <a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>", "zh-Hans": "管理订阅请访问：<a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>", "zh-Hant": "管理訂閱請訪問：<a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>" },
+      "manage.p2":   { en: "If you lose access after a purchase, use the in-app <strong>Restore Purchases</strong> action first.", "zh-Hans": "如果购买后丢失访问权限，请先使用应用内的<strong>「恢复购买」</strong>功能。", "zh-Hant": "如果購買後丟失訪問權限，請先使用應用內的<strong>「恢復購買」</strong>功能。" },
+      "other.h":     { en: "Support and privacy", "zh-Hans": "支持与隐私", "zh-Hant": "支援與隱私" },
+      "other.support": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "other.privacy": { en: "Privacy Policy", "zh-Hans": "隐私政策", "zh-Hant": "隱私政策" },
+      "footer.copy":   { en: "© UpBuild", "zh-Hans": "© UpBuild", "zh-Hant": "© UpBuild" }
+    };
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,66 +44,53 @@
         </span>
         <span>UpBuild</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher"></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="support.html" data-i18n="nav.support">Support</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="page-shell">
     <div class="container">
       <section class="page-hero">
-        <div class="hero-kicker">Terms of Use</div>
-        <h1>Terms and subscription information</h1>
-        <p>
-          UpBuild offers optional in-app purchases and subscriptions managed by Apple through the App Store.
-        </p>
+        <div class="hero-kicker" data-i18n="kicker">Terms of Use</div>
+        <h1 data-i18n="title">Terms and subscription information</h1>
+        <p data-i18n="subtitle">UpBuild offers optional in-app purchases and subscriptions managed by Apple through the App Store.</p>
       </section>
 
       <section class="page-card">
-        <h2>Apple Standard EULA</h2>
-        <p>
-          UpBuild relies on Apple’s Standard End User License Agreement for App Store apps.
-        </p>
-        <p>
-          Read it here:
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">
-            Apple Standard EULA
-          </a>
-        </p>
+        <h2 data-i18n="eula.h">Apple Standard EULA</h2>
+        <p data-i18n="eula.p1">UpBuild relies on Apple's Standard End User License Agreement for App Store apps.</p>
+        <p data-i18n="eula.p2">Read it here: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">Apple Standard EULA</a></p>
       </section>
 
       <section class="page-card">
-        <h2>Purchases and billing</h2>
+        <h2 data-i18n="billing.h">Purchases and billing</h2>
         <ul class="policy-list">
-          <li>Payment is charged to your Apple ID account after purchase confirmation.</li>
-          <li>Auto-renewable subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.</li>
-          <li>You can manage and cancel subscriptions in your Apple account settings.</li>
-          <li>Lifetime purchases, where offered, are non-renewing one-time purchases.</li>
+          <li data-i18n="billing.l1">Payment is charged to your Apple ID account after purchase confirmation.</li>
+          <li data-i18n="billing.l2">Auto-renewable subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.</li>
+          <li data-i18n="billing.l3">You can manage and cancel subscriptions in your Apple account settings.</li>
+          <li data-i18n="billing.l4">Lifetime purchases, where offered, are non-renewing one-time purchases.</li>
         </ul>
       </section>
 
       <section class="page-card">
-        <h2>Managing subscriptions</h2>
-        <p>
-          To manage your subscription, visit:
-          <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noreferrer">
-            apps.apple.com/account/subscriptions
-          </a>
-        </p>
-        <p>
-          If you lose access after a purchase, use the in-app <strong>Restore Purchases</strong> action first.
-        </p>
+        <h2 data-i18n="manage.h">Managing subscriptions</h2>
+        <p data-i18n="manage.p1">To manage your subscription, visit: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noreferrer">apps.apple.com/account/subscriptions</a></p>
+        <p data-i18n="manage.p2">If you lose access after a purchase, use the in-app <strong>Restore Purchases</strong> action first.</p>
       </section>
 
       <section class="page-card">
-        <h2>Support and privacy</h2>
+        <h2 data-i18n="other.h">Support and privacy</h2>
         <ul class="link-list">
-          <li><a href="support.html">Support</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="support.html" data-i18n="other.support">Support</a></li>
+          <li><a href="privacy.html" data-i18n="other.privacy">Privacy Policy</a></li>
         </ul>
       </section>
     </div>
@@ -84,11 +98,11 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© UpBuild</div>
+      <div data-i18n="footer.copy">© UpBuild</div>
       <div class="inline-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
       </div>
     </div>
   </footer>
