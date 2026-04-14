@@ -7,6 +7,36 @@
   <title>Support · UpBuild</title>
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/i18n.js" defer></script>
+  <script>
+    window.I18N = {
+      "nav.home":    { en: "Home", "zh-Hans": "首页", "zh-Hant": "首頁" },
+      "nav.privacy": { en: "Privacy", "zh-Hans": "隐私", "zh-Hant": "隱私" },
+      "nav.support": { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "nav.terms":   { en: "Terms", "zh-Hans": "条款", "zh-Hant": "條款" },
+      "kicker":      { en: "Support", "zh-Hans": "支持", "zh-Hant": "支援" },
+      "title":       { en: "Need help with UpBuild?", "zh-Hans": "需要 UpBuild 的帮助？", "zh-Hant": "需要 UpBuild 的幫助？" },
+      "subtitle":    { en: "For app issues, purchase questions, or feedback, contact support by email.", "zh-Hans": "如有应用问题、购买疑问或反馈，请通过电子邮件联系支持。", "zh-Hant": "如有應用問題、購買疑問或反饋，請通過電子郵件聯繫支援。" },
+      "contact.h":   { en: "Contact support", "zh-Hans": "联系支持", "zh-Hant": "聯繫支援" },
+      "contact.p":   { en: "Email: <a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>", "zh-Hans": "邮箱：<a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>", "zh-Hant": "郵箱：<a href=\"mailto:rafaelxiao@hotmail.com\">rafaelxiao@hotmail.com</a>" },
+      "contact.note": { en: "Include your app version, device model, iOS version, and a short description of the issue.", "zh-Hans": "请附上应用版本、设备型号、iOS 版本和问题简述。", "zh-Hant": "請附上應用版本、設備型號、iOS 版本和問題簡述。" },
+      "topics.h":    { en: "What you can contact us about", "zh-Hans": "你可以联系我们的事项", "zh-Hant": "您可以聯繫我們的事項" },
+      "topics.l1":   { en: "Bug reports", "zh-Hans": "Bug 报告", "zh-Hant": "Bug 報告" },
+      "topics.l2":   { en: "Feature suggestions", "zh-Hans": "功能建议", "zh-Hant": "功能建議" },
+      "topics.l3":   { en: "Questions about app behavior", "zh-Hans": "应用行为疑问", "zh-Hant": "應用行為疑問" },
+      "topics.l4":   { en: "Purchase and subscription access issues", "zh-Hans": "购买和订阅访问问题", "zh-Hant": "購買和訂閱訪問問題" },
+      "topics.l5":   { en: "Privacy-related questions", "zh-Hans": "隐私相关问题", "zh-Hant": "隱私相關問題" },
+      "sub.h":       { en: "Subscription help", "zh-Hans": "订阅帮助", "zh-Hant": "訂閱幫助" },
+      "sub.l1":      { en: "If you already purchased access, use the in-app <strong>Restore Purchases</strong> action.", "zh-Hans": "如果你已购买，请使用应用内的<strong>「恢复购买」</strong>功能。", "zh-Hant": "如果您已購買，請使用應用內的<strong>「恢復購買」</strong>功能。" },
+      "sub.l2":      { en: "Subscriptions are managed by Apple through your Apple ID account.", "zh-Hans": "订阅由 Apple 通过你的 Apple ID 帐户管理。", "zh-Hant": "訂閱由 Apple 通過您的 Apple ID 帳戶管理。" },
+      "sub.l3":      { en: "You can manage or cancel subscriptions at: <a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>", "zh-Hans": "你可以在以下地址管理或取消订阅：<a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>", "zh-Hant": "您可以在以下地址管理或取消訂閱：<a href=\"https://apps.apple.com/account/subscriptions\" target=\"_blank\" rel=\"noreferrer\">apps.apple.com/account/subscriptions</a>" },
+      "links.h":     { en: "Useful links", "zh-Hans": "实用链接", "zh-Hant": "實用連結" },
+      "links.privacy": { en: "Privacy Policy", "zh-Hans": "隐私政策", "zh-Hant": "隱私政策" },
+      "links.terms":  { en: "Terms of Use", "zh-Hans": "使用条款", "zh-Hant": "使用條款" },
+      "links.home":   { en: "Back to homepage", "zh-Hans": "返回首页", "zh-Hant": "返回首頁" },
+      "footer.copy":  { en: "© UpBuild", "zh-Hans": "© UpBuild", "zh-Hant": "© UpBuild" }
+    };
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,64 +47,58 @@
         </span>
         <span>UpBuild</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher"></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="support.html" data-i18n="nav.support">Support</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="page-shell">
     <div class="container">
       <section class="page-hero">
-        <div class="hero-kicker">Support</div>
-        <h1>Need help with UpBuild?</h1>
-        <p>For app issues, purchase questions, or feedback, contact support by email.</p>
+        <div class="hero-kicker" data-i18n="kicker">Support</div>
+        <h1 data-i18n="title">Need help with UpBuild?</h1>
+        <p data-i18n="subtitle">For app issues, purchase questions, or feedback, contact support by email.</p>
       </section>
 
       <section class="page-card">
-        <h2>Contact support</h2>
-        <p>
-          Email: <a href="mailto:rafaelxiao@hotmail.com">rafaelxiao@hotmail.com</a>
-        </p>
-        <p class="note">
-          Include your app version, device model, iOS version, and a short description of the issue.
-        </p>
+        <h2 data-i18n="contact.h">Contact support</h2>
+        <p data-i18n="contact.p">Email: <a href="mailto:rafaelxiao@hotmail.com">rafaelxiao@hotmail.com</a></p>
+        <p class="note" data-i18n="contact.note">Include your app version, device model, iOS version, and a short description of the issue.</p>
       </section>
 
       <section class="page-card">
-        <h2>What you can contact us about</h2>
+        <h2 data-i18n="topics.h">What you can contact us about</h2>
         <ul class="policy-list">
-          <li>Bug reports</li>
-          <li>Feature suggestions</li>
-          <li>Questions about app behavior</li>
-          <li>Purchase and subscription access issues</li>
-          <li>Privacy-related questions</li>
+          <li data-i18n="topics.l1">Bug reports</li>
+          <li data-i18n="topics.l2">Feature suggestions</li>
+          <li data-i18n="topics.l3">Questions about app behavior</li>
+          <li data-i18n="topics.l4">Purchase and subscription access issues</li>
+          <li data-i18n="topics.l5">Privacy-related questions</li>
         </ul>
       </section>
 
       <section class="page-card">
-        <h2>Subscription help</h2>
+        <h2 data-i18n="sub.h">Subscription help</h2>
         <ul class="policy-list">
-          <li>If you already purchased access, use the in-app <strong>Restore Purchases</strong> action.</li>
-          <li>Subscriptions are managed by Apple through your Apple ID account.</li>
-          <li>
-            You can manage or cancel subscriptions at:
-            <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noreferrer">
-              apps.apple.com/account/subscriptions
-            </a>
-          </li>
+          <li data-i18n="sub.l1">If you already purchased access, use the in-app <strong>Restore Purchases</strong> action.</li>
+          <li data-i18n="sub.l2">Subscriptions are managed by Apple through your Apple ID account.</li>
+          <li data-i18n="sub.l3">You can manage or cancel subscriptions at: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noreferrer">apps.apple.com/account/subscriptions</a></li>
         </ul>
       </section>
 
       <section class="page-card">
-        <h2>Useful links</h2>
+        <h2 data-i18n="links.h">Useful links</h2>
         <ul class="link-list">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="index.html">Back to homepage</a></li>
+          <li><a href="privacy.html" data-i18n="links.privacy">Privacy Policy</a></li>
+          <li><a href="terms.html" data-i18n="links.terms">Terms of Use</a></li>
+          <li><a href="index.html" data-i18n="links.home">Back to homepage</a></li>
         </ul>
       </section>
     </div>
@@ -82,11 +106,11 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© UpBuild</div>
+      <div data-i18n="footer.copy">© UpBuild</div>
       <div class="inline-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
       </div>
     </div>
   </footer>
